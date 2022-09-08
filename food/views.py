@@ -9,9 +9,6 @@ def index(request):
     context = {'item_list': items,}
     return render(request, 'food/index.html', context)
 
-def item(request):
-    return render(request, 'food/item.html')
-
 def detail(request, item_id):
     item = Item.objects.get(pk=item_id)
     context = {'item': item,}
