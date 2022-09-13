@@ -14,9 +14,14 @@
     <nav class="navbar navbar-dark bg-dark">
         <a href="#" class="navbar-brand">FoodApp</a>
         <div class="navbar">
-            <a class="nav-item nav-link link-success px-2" href="{% url 'food:create_item' %}">Add Item</a>
-            <a class="nav-item nav-link link-success px-2" href="#">Delete Item</a>
-            <a class="nav-item nav-link link-success px-2" href="#">View Item</a>
+            <a href="{% url 'food:create_item' %}" class="nav-item nav-link link-success px-2">Add Item</a>
+            <a href="#" class="nav-item nav-link link-success px-2">Delete Item</a>
+            <a href="#" class="nav-item nav-link link-success px-2">View Item</a>
+            {% if user.is_authenticated %}
+                <a class="nav-item nav-link link-success px-2" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a class="nav-item nav-link link-success px-2" href="{% url 'login' %}">Login</a>
+            {% endif %}
         </div>
     </nav>
     {% if messages %}
