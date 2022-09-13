@@ -12,7 +12,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             msg = f'Welcome {username}, your account is created.'
             messages.success(request, msg)
-            return redirect('food:index')
+            return redirect('login')
     else:
         form = RegisterForm()
     context = {'form': form}
