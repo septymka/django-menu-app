@@ -18,9 +18,10 @@
             <a href="#" class="nav-item nav-link link-success px-2">Delete Item</a>
             <a href="#" class="nav-item nav-link link-success px-2">View Item</a>
             {% if user.is_authenticated %}
-                <a class="nav-item nav-link link-success px-2" href="{% url 'logout' %}">Logout</a>
+                <a href="{% url 'profile' %}" class="nav-item nav-link link-success px-2">Profile</a>
+                <a href="{% url 'logout' %}" class="nav-item nav-link link-success px-2">Logout</a>
             {% else %}
-                <a class="nav-item nav-link link-success px-2" href="{% url 'login' %}">Login</a>
+                <a href="{% url 'login' %}" class="nav-item nav-link link-success px-2">Login</a>
             {% endif %}
         </div>
     </nav>
