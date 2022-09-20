@@ -11,16 +11,16 @@
                         Login
                     </div>
                 </div>
-                <div class="card-body col-auto text-center">
+                <div class="card-body col-auto text-end">
                     <form method="POST">
                         {% csrf_token %}
                         {% for field in form %}
-                            <div class="form-group pt-3">
+                            <div class="form-group p-2">
                                 {{ field.name }}
                                 {{ field }}
                             </div>
                         {% endfor %}
-                        <button class="btn btn-secondary mt-4" type="submit">Login</button>
+                        <button class="btn btn-secondary m-2" type="submit">Login</button>
                     </form>
                 </div>
             </div>
