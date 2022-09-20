@@ -4,13 +4,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-           <img class="card" width="250px" src="{{ item.image }}" alt="{{ item.image }}"/>
+           <img class="card" width="250px" src="{{ object.image }}" alt="{{ item.image }}"/>
         </div>
         <div class="col-md-6">
-            <h1> {{ item.name }} </h1>
-            <p> {{ item.description }} </p>
-            <p> {{ item.price }} PLN </p>
-            <a href="{% url 'food:delete_item' item.id %}">Delete</a>
+            <h1> {{ object.name }} </h1>
+            <p> {{ object.description }} </p>
+            <p> {{ object.price }} PLN </p>
+            <a href="{% url 'food:delete_item' object.pk %}">Delete</a>
         </div>
     </div>
 
